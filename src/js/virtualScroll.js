@@ -21,9 +21,6 @@ var CSS_PX_PROP_MAP = {
     'height': true,
     'margin-top': true
 };
-var sendHostName = function() {
-    snippet.sendHostname('virtual-scroll', 'UA-129987462-1');
-};
 
 /**
  * Virtual scroll component.
@@ -101,7 +98,7 @@ var VirtualScroll = snippet.defineClass(/** @lends VirtualScroll.prototype */{
         this._attachEvent();
 
         if (options.usageStatistics) {
-            sendHostName();
+            snippet.sendHostname('virtual-scroll', 'UA-129987462-1');
         }
     },
 
